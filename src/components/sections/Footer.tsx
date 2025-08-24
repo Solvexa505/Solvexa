@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Contact info */}
           <div className="text-center md:text-right space-y-1 text-sm text-foreground/60">
             <p>Email: <a href="mailto:admin@solvexa.co.in" className="hover:text-primary transition-colors">admin@solvexa.co.in</a></p>
-            <p>Phone: <a href="tel:+1234567890" className="hover:text-primary transition-colors">+91 97654321</a></p>
+            <p>Phone: <a href="tel:+1234567890" className="hover:text-primary transition-colors">+91 9884157774</a></p>
             <p>Address:<b> 24/8A, PonniammamMeduBlock Veerapandian, Chennai - 600110, Tamil Nadu.</b></p>
           </div>
         </div>

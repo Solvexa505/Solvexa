@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Solvexa Design System - Futuristic Tech Landing Page
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 222 84% 4%;
+    --foreground: 210 40% 98%;
+
+    /* Brand Gradient Colors */
+    --gradient-blue: 221 83% 25%;
+    --gradient-violet: 263 85% 60%;
+    --gradient-teal: 172 85% 32%;
+    
+    /* Surface Colors */
+    --card: 222 84% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Interactive Colors */
+    --primary: 263 85% 60%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 263 85% 70%;
+
+    --secondary: 221 83% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 47% 11%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 172 85% 32%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 263 85% 60%;
+
+    /* Design System Tokens */
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--gradient-blue)), hsl(var(--gradient-violet)), hsl(var(--gradient-teal)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--gradient-blue) / 0.9), hsl(var(--gradient-violet) / 0.8), hsl(var(--gradient-teal) / 0.9));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.3), transparent 70%);
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.3);
+    --shadow-elegant: 0 25px 50px -12px hsl(222 84% 4% / 0.5);
+    
+    /* Animation Properties */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Background Animation */
+    --bg-size: 400% 400%;
+    --animate-gradient: gradient-flow 8s ease infinite;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark mode support (matches the base theme) */
+  .dark {
+    /* Same as root for consistent dark theme */
+  }
+}
+
+/* Keyframes for animations */
+@keyframes gradient-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Animated background */
+  .gradient-bg {
+    background: var(--gradient-primary);
+    background-size: var(--bg-size);
+    animation: var(--animate-gradient);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-glow;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .hero-button {
+    background: hsl(var(--primary));
+    box-shadow: var(--shadow-glow);
+    transition: var(--transition-spring);
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .hero-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.5), 0 10px 30px hsl(var(--primary) / 0.3);
+  }
+
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .glass-effect {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+}

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { motion } from "framer-motion";
 import LogoImage from "../assets/logo.png"; // your logo
 
 const HeroSection = () => {
@@ -39,11 +40,19 @@ const HeroSection = () => {
     >
       {/* Hero Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Logo */}
-        <img
+        {/* Logo with breathing animation */}
+        <motion.img
           src={LogoImage}
           alt="Solvexa Logo"
-          className="w-64 md:w-80 lg:w-[500px] mb-6 object-contain"
+          className="mb-6 object-contain"
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.1, 1] }} // breathing effect
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+           style={{ width: "700px", maxWidth: "95vw" }} // enlarged size // manual size control
         />
 
         {/* Tagline */}

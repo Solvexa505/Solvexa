@@ -1,51 +1,43 @@
-# Solvexa Wave Launch
+# 🚀 Solvexa Wave Launch
 
-A modern web application for launching and managing Solvexa Wave projects.
+A modern and responsive web application designed to **launch and manage Solvexa Wave projects** seamlessly.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9758cc35-73ce-4fc7-b1fa-6d55215f3091/deploy-status)](https://app.netlify.com/projects/solvexa/deploys)
+[![License](https://img.shields.io/badge/License-Solvexa-blue.svg)](#license)
 
-## Features
+---
 
-- Biography of Solvexa
-- Responsive UI
-- Integration with Solvexa
+## 🌟 Features
 
-## Getting Started
+- **Biography of Solvexa** – Learn about the story and mission.  
+- **Responsive UI** – Works perfectly on desktop, tablet, and mobile devices.  
+- **Seamless Integration** – Connects smoothly with Solvexa services.  
+- **Fast Performance** – Optimized for quick loading and smooth interactions.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js  
+- **Package Manager:** npm / yarn  
+- **Hosting:** Netlify  
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
 
 ### Prerequisites
 
-- Node.js (v14+)
-- npm or yarn
+- Node.js v14 or higher  
+- npm or yarn  
 
 ### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/yourusername/solvexa-profile-launch.git
 cd solvexa-profile-launch
 npm install
-```
-
-### Running the App
-
-```bash
-npm start
-```
-
-The app will be available at `http://localhost:3000`.
-
-## Folder Structure
-
-```
-solvexa-profile-launch/
-├── src/
-├── public/
-├── package.json
-└── README.md
-```
-
-## Contributing
-
-Contributions are welcome! Please open issues or pull requests.
-
-## License
-
-This project is licensed under the Solvexa License.

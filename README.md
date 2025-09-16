@@ -1,4 +1,4 @@
-# 🚀 Solvexa Wave Launch
+# Solvexa Wave Launch
 
 A modern and responsive web application designed to **launch and manage Solvexa Wave projects** seamlessly.
 
@@ -7,7 +7,7 @@ A modern and responsive web application designed to **launch and manage Solvexa 
 
 ---
 
-## 🌟 Features
+##  Features
 
 - **Biography of Solvexa** – Learn about the story and mission.  
 - **Responsive UI** – Works perfectly on desktop, tablet, and mobile devices.  
@@ -16,15 +16,7 @@ A modern and responsive web application designed to **launch and manage Solvexa 
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend:** React.js  
-- **Package Manager:** npm / yarn  
-- **Hosting:** Netlify  
-
----
-
-## 🚀 Getting Started
+##  Getting Started
 
 Follow these steps to run the project locally.
 

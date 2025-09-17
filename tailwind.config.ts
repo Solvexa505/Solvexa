@@ -105,7 +105,17 @@ export default {
 				'slide-up': 'slide-up 0.8s ease-out',
 				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
 				'float': 'float 6s ease-in-out infinite'
-			}
+			},
+			theme: {
+			extend: {
+				gridTemplateColumns: {
+				20: "repeat(20, minmax(0, 1fr))",
+				},
+				gridTemplateRows: {
+				20: "repeat(20, minmax(0, 1fr))",
+				},
+			},
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

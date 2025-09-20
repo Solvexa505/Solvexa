@@ -54,10 +54,10 @@ const SolvexaTeam = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-teal-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            Solvexa Team
+            Zeuu Technology Team
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Meet the visionary leaders and the passionate members powering Solvexa.
+            Meet the visionary leaders and the passionate members powering Zeuu technology.
           </p>
         </motion.div>
 

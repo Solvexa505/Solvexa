@@ -8,9 +8,9 @@ const Projects = () => {
     {
       title: "Project 505",
       description: "An innovative platform undergoing rigorous testing to push boundaries in tech.",
-      category: "AI & Automation",
-      status: "undergoing testing",
-      tech: ["React", "Node.js", "TailwindCSS"],
+      category: "Software & Hardware",
+      status: "Untergoing Development",
+      tech: [],
       details: "Here is more detailed info about Project 505, including features, roadmap, and screenshots.",
     },
   ];
@@ -21,6 +21,8 @@ const Projects = () => {
         return "text-green-400 bg-green-400/10";
       case "Beta":
         return "text-blue-400 bg-blue-400/10";
+      case "Untergoing Development":
+        return "text-red-400 bg-red-400/10";
       case "In Development":
         return "text-yellow-400 bg-yellow-400/10";
       case "Research Phase":

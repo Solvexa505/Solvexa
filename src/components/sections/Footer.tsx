@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Footer = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
-
   // Show button after scrolling 300px
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-t from-background to-gradient-blue/5 py-16 overflow-hidden">
+      <footer id="contact" className="relative bg-gradient-to-t from-background to-gradient-blue/5 py-16 overflow-hidden"></footer>
       <div className="container mx-auto px-6 relative z-10">
         {/* Top contact and CTA */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-16">
@@ -40,9 +40,49 @@ const Footer = () => {
 
           {/* Contact info */}
           <div className="text-center md:text-right space-y-1 text-sm text-foreground/60">
-            <p>Email: <a href="mailto:admin@solvexa.co.in" className="hover:text-primary transition-colors">admin@solvexa.co.in</a></p>
-            <p>Phone: <a href="tel:+91 9884157774" className="hover:text-primary transition-colors">+91 9884157774</a></p>
-            <p>Address:<b> 24/8A, PonniammamMeduBlock Veerapandian, Chennai - 600110, Tamil Nadu.</b></p>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:admin@solvexa.co.in"
+                className="hover:text-primary transition-colors"
+              >
+                admin@solvexa.co.in
+              </a>
+            </p>
+            <p>
+              Phone:{" "}
+              <a
+                href="tel:+919884157774"
+                className="hover:text-primary transition-colors"
+              >
+                +91 9884157774
+              </a>
+            </p>
+            <p>
+              Address:{" "}
+              <a
+                href="https://www.google.com/maps?q=24/8A,+Ponniammam+Medu,+Veerapandian,+Chennai,+600110"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors font-semibold"
+              >
+                24/8A, Ponniammam Medu Block, Veerapandian, Chennai - 600110, Tamil Nadu
+              </a>
+            </p>
+
+            {/* Google Map Embed */}
+            <div className="w-full h-48 mt-4">
+              <iframe
+              title="Company Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.941836814521!2d80.23233471526518!3d13.065529890659052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52673ce5e4e5bf%3A0xabcdef1234567890!2s24%2F8A%20Ponniamman%20Medu%20Block%2C%20Veerapandian%2C%20Chennai%20600110!5e0!3m2!1sen!2sin!4v1695212345678!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            </div>
           </div>
         </div>
 
@@ -64,12 +104,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12 text-sm">
           {/* About */}
           <div>
-            <h4 className="text-lg font-bold text-primary mb-4">About Solvexa</h4>
+            <h4 className="text-lg font-bold text-primary mb-4">
+              About ZEUU TECHNOLOGY · Solvexa
+            </h4>
             <p className="text-foreground/60 leading-relaxed">
               Innovating the future through cutting-edge technology solutions and visionary research.
             </p>
           </div>
-
 
           {/* Connect Links */}
           <div>
@@ -93,12 +134,14 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
+          {/* You can optionally add another section or leave blank */}
         </div>
 
         {/* Bottom copyright */}
         <div className="border-t border-border/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-foreground/50">
-            <p>© 2024 Solvexa. All rights reserved.</p>
+            <p>© 2025 Zeuu Technology. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
                 <a key={item} href="#" className="hover:text-primary transition-colors">{item}</a>
